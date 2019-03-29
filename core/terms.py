@@ -1,7 +1,7 @@
 from sortedcontainers import SortedDict
 
-import canvas.core.api as api
-from canvas.core import config
+import api
+import config
 
 
 def term_data():

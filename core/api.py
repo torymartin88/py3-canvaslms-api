@@ -1,10 +1,9 @@
 import time
-import winsound
 
 from requests import delete as api_delete, exceptions as api_exceptions, get as api_get, post as api_post, \
     put as api_put
 
-from canvas.core import config
+import config
 
 
 def get(url):
@@ -18,10 +17,10 @@ def get(url):
 def get_list(url):
     """ compile a paginated list up to 100 at a time (instead of default 10) and return the entire list """
     paginated = []
-    r = get('{}{}per_page=100'.format(url, '&' if '?' in url else '?'))
-    while 'next' in r.links:
-        paginated.extend(r.json())
-        r = get(r.links['next']['url'])
+    r = get('{}{}per_page=10'.format(url, '&' if '?' in url else '?'))
+    # while 'next' in r.links:
+    #     paginated.extend(r.json())
+    #     r = get(r.links['next']['url'])
     paginated.extend(r.json())
     return paginated
 
@@ -64,7 +63,6 @@ def normalize_url(url):
 
 
 def time_out(url, action, e):
-    winsound.Beep(1200, 300)
     print('*' * 40, ' ERROR - RETRYING IN 10 SECONDS ', '*' * 40)
     print('\n***EXCEPTION:', e, '\n***ACTION:', action, '\n***URL:', url, '\n')
     time.sleep(10)

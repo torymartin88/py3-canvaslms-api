@@ -1,10 +1,10 @@
 import operator
 import re
 
-import canvas.core.api as api
-from canvas.core.accounts import all_programs, program_account
-from canvas.core.io import wait
-from canvas.core.terms import all_terms, term_id_from_name
+import api
+from accounts import all_programs, program_account
+# from io import wait
+from terms import all_terms, term_id_from_name
 
 
 def course_front_page_set(course_id):
@@ -289,9 +289,9 @@ def rename_course(course_id, name, code):
         api.put('courses/{}'.format(course_id), req_data)
 
 
-def get_courses_by_account_id(account_id, term):
+def get_courses_by_account_id(account_id, term_id):
     """ return a list of courses for a program by its account id """
-    return sorted(api.get_list('accounts/{}/courses?enrollment_term_id={}'.format(account_id, term_id_from_name(term))),
+    return sorted(api.get_list('accounts/{}/courses?enrollment_term_id={}'.format(account_id, term_id)),
                   key=lambda c: c['name'])
 
 

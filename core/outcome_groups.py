@@ -1,4 +1,4 @@
-import canvas.core.api as api
+import api
 
 
 def get_outcome_group(context, context_id, group_id):

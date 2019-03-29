@@ -1,4 +1,4 @@
-from canvas.core import api as api
+from api
 
 
 def get_page_views(user, start_date, end_date):

@@ -1,4 +1,4 @@
-import canvas.core.api as api
+import api
 
 
 def get_outcome(outcome_id):

@@ -1,4 +1,4 @@
-from canvas.core import api as api
+import api
 
 
 def assignment_is_graded(assignment):

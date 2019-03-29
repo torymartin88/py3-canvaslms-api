@@ -1,6 +1,10 @@
 from sortedcontainers import SortedDict
 
-from canvas.core.api import get_list
+from api import get_list
+
+
+def get_accounts():
+    return get_list('accounts')
 
 
 def get_subaccounts(account_id):

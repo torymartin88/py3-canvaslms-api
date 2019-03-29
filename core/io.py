@@ -6,10 +6,10 @@ import pymysql
 import pypyodbc
 import xlsxwriter
 
-from canvas.core import config
-from canvas.core.accounts import cmi_program, program_account
-from canvas.core.terms import term_id_from_name
-import canvas.core.api as api
+import api
+import config
+from accounts import cmi_program, program_account
+from terms import term_id_from_name
 
 
 def get_db_query_results(db, query):

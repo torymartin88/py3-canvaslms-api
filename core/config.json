@@ -1,10 +1,10 @@
 {
   "canvas": {
-    "prod": "https://<YOUR SUBDOMAIN>.instructure.com/api/v1/",
-    "test": "https://<YOUR SUBDOMAIN>.test.instructure.com/api/v1/",
-    "beta": "https://<YOUR SUBDOMAIN>.beta.instructure.com/api/v1/",
-    "token": "<API TOKEN>"
-    "root_account": "<YOUR ROOT ACCOUNT>",
+    "prod": "https://bju.instructure.com/api/v1/",
+    "test": "https://bju.test.instructure.com/api/v1/",
+    "beta": "https://bju.beta.instructure.com/api/v1/",
+    "token": "10801~D43E7FMYqlb228TWpt0oae8HLYkWB2tIEgj6VnA4u0n1THkhxjtG5SxFmjNdSddW",
+    "root_account": "1",
     "academic_account": "<YOUR TOP-LEVEL ACADEMIC ACCOUNT>"
   },
   "cmi": {

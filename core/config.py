@@ -1,9 +1,10 @@
 import json
 
-env = 'test' if input('Enter=PROD, or TEST? ').lower() == 'test' else 'prod'
-print(env)
+# env = 'test' if input('Enter=PROD, or TEST? ').lower() == 'test' else 'prod'
+# print(env)
+env = 'prod'
 
-with open('..\\core\\config.json') as config_file:
+with open('config.json') as config_file:
     config = json.load(config_file)
 
 # canvas
